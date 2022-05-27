@@ -8,6 +8,7 @@ package modelo.dao;
 import java.util.List;
 import modelo.entidad.Usuario;
 import modelo.util.HibernateUtil;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -83,6 +84,15 @@ public class UsuarioDao {
                 sesion.close();
             }
         }
+    }
+    
+        public Usuario login(Usuario usuario) {
+        Session sesion = HibernateUtil.getSessionFactory().openSession();
+        String hql = "SELECT u FROM Usuario u WHERE u.usuario = :usuario AND u.clave = :clave";
+        Query q = sesion.createQuery(hql);
+        q.setParameter("usuario", usuario.getUsuario());
+        q.setParameter("clave", usuario.getClave());
+        return (Usuario) q.uniqueResult();
     }
 
 }
