@@ -20,6 +20,8 @@ public class Cliente  implements java.io.Serializable {
      private Set<Remesa> remesas = new HashSet<Remesa>(0);
 
     public Cliente() {
+        //para combo
+        tipoDocumento = new TipoDocumento();
     }
 
     public Cliente(TipoDocumento tipoDocumento, String NDocumento, String nombre, String apellido, String telefono, Set<Remesa> remesas) {

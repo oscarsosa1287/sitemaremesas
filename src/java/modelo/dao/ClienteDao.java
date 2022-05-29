@@ -6,23 +6,23 @@
 package modelo.dao;
 
 import java.util.List;
-import modelo.entidad.TipoDocumento;
+import modelo.entidad.Cliente;
 import modelo.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 /**
  *
- * @author Oscar Sosa
+ * @author Oscar
  */
-public class TipoDocumentoDao {
-
-    public List<TipoDocumento> listarTipoDocumento() {
-        List<TipoDocumento> lista = null;
+public class ClienteDao {
+   
+    public List<Cliente> listarClientes() {
+        List<Cliente> lista = null;
         Session sesion = HibernateUtil.getSessionFactory().openSession();
         Transaction t = sesion.beginTransaction();
 
-        String hql = "FROM TipoDocumento";
+        String hql = "FROM Cliente"; 
         try {
             lista = sesion.createQuery(hql).list();
             t.commit();
@@ -32,31 +32,13 @@ public class TipoDocumentoDao {
         }
         return lista;
     }
-
-    public void agregar(TipoDocumento tipoDocumento) {
+            
+    public void agregar(Cliente cliente) {
         Session sesion = null;
         try {
             sesion = HibernateUtil.getSessionFactory().openSession();
             sesion.beginTransaction();
-            sesion.save(tipoDocumento);
-            sesion.getTransaction().commit();
-
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            sesion.getTransaction().rollback();
-        } finally {
-            if (sesion != null) {
-                sesion.close();
-            }
-        }
-    }
-
-    public void modificar(TipoDocumento tipoDocumento) {
-        Session sesion = null;
-        try {
-            sesion = HibernateUtil.getSessionFactory().openSession();
-            sesion.beginTransaction();
-            sesion.update(tipoDocumento);
+            sesion.save(cliente);
             sesion.getTransaction().commit();
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -67,13 +49,13 @@ public class TipoDocumentoDao {
             }
         }
     }
-
-    public void eliminar(TipoDocumento tipoDocumento) {
+    
+    public void modificar(Cliente cliente) {
         Session sesion = null;
         try {
             sesion = HibernateUtil.getSessionFactory().openSession();
             sesion.beginTransaction();
-            sesion.delete(tipoDocumento);
+            sesion.update(cliente);
             sesion.getTransaction().commit();
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -84,5 +66,24 @@ public class TipoDocumentoDao {
             }
         }
     }
-
+    
+    public void eliminar(Cliente cliente) {
+        Session sesion = null;
+        try {
+            sesion = HibernateUtil.getSessionFactory().openSession();
+            sesion.beginTransaction();
+            sesion.delete(cliente);
+            sesion.getTransaction().commit();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            sesion.getTransaction().rollback();
+        } finally {
+            if (sesion != null) {
+                sesion.close();
+            }
+        }
+    }
+ 
 }
+
+

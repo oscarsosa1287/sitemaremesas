@@ -35,7 +35,7 @@ public class TipoDocumentoControl implements Serializable {
 
     public List<TipoDocumento> getListaTipoDocumentos() {
         TipoDocumentoDao ed = new TipoDocumentoDao();
-        listaTipoDocumentos = ed.listarEstudtantes();
+        listaTipoDocumentos = ed.listarTipoDocumento();
         return listaTipoDocumentos;
     }
 

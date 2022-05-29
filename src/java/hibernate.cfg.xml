@@ -45,6 +45,7 @@ Contributor(s):
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/remesas?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.enable_lazy_load_no_trans">true</property>
     <mapping resource="modelo/entidad/Usuario.hbm.xml"/>
     <mapping resource="modelo/entidad/Cliente.hbm.xml"/>
     <mapping resource="modelo/entidad/FormaPago.hbm.xml"/>
