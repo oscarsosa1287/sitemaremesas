@@ -13,6 +13,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import modelo.dao.UsuarioDao;
 import modelo.entidad.Usuario;
+import org.apache.commons.codec.digest.DigestUtils;
 
 /**
  *
@@ -56,12 +57,14 @@ public class UsuarioControl implements Serializable {
     }
 
     public void agregarUsuario() {
-        UsuarioDao ed = new UsuarioDao();       
+        UsuarioDao ed = new UsuarioDao(); 
+       usuario.setClave(DigestUtils.md5Hex(usuario.getClave()));
         ed.agregar(usuario);
     }
 
     public void modificarUsuario() {
         UsuarioDao ed = new UsuarioDao();
+        usuario.setClave(DigestUtils.md5Hex(usuario.getClave()));
         ed.modificar(usuario);
         limpiarUsuario();
     }

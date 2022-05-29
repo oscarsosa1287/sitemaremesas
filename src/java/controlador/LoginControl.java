@@ -15,6 +15,7 @@ import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpSession;
 import modelo.dao.UsuarioDao;
 import modelo.entidad.Usuario;
+import org.apache.commons.codec.digest.DigestUtils;
 
 /**
  *
@@ -42,7 +43,7 @@ public class LoginControl implements Serializable {
         FacesMessage mensaje = null;
         UsuarioDao ud = new UsuarioDao();
         // para encriptar clave
-        // usuario.setClave(DigestUtils.md5Hex(usuario.getClave()));
+         usuario.setClave(DigestUtils.md5Hex(usuario.getClave()));
         usuario = ud.login(usuario);
         if (usuario != null) {
             FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("usuario", usuario);
