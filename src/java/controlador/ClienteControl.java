@@ -83,13 +83,13 @@ public class ClienteControl implements Serializable {
         limpiarCliente();
     }
     
-////    public LoginControl getLoginControl() {
-////        return loginControl;
-////    }
-////
-////    public void setLoginControl(LoginControl loginControl) {
-////        this.loginControl = loginControl;
-////    }
+//    public LoginControl getLoginControl() {
+//        return loginControl;
+//    }
+//
+//    public void setLoginControl(LoginControl loginControl) {
+//        this.loginControl = loginControl;
+//    }
 
     // para combos
     public List<SelectItem> getListaTipoDocumentos() {

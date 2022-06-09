@@ -63,6 +63,7 @@
                         <p:menuitem value="Forma de pago" outcome="/vista/mantenimientos/formaPago" icon="pi pi-angle-right" />
                         <p:menuitem value="Tipo Documento" outcome="/vista/mantenimientos/tipoDocumento" icon="pi pi-angle-right" />
                         <p:menuitem value="Usuario" outcome="/vista/mantenimientos/usuario" icon="pi pi-angle-right" />
+                        <p:menuitem value="Cliente" outcome="/vista/mantenimientos/cliente" icon="pi pi-angle-right" />
                     </p:submenu>
 
                     <p:submenu label="Remesa" icon="ui-icon-circle-plus">
@@ -70,7 +71,12 @@
                     </p:submenu>
 
                     <p:submenu label="Reportes" icon="ui-icon-document">
-
+                        <p:menuitem value="Paises" outcome="/vista/reportes/listadopaises" icon="pi pi-angle-right" />
+                        <p:menuitem value="Remesas" outcome="/vista/reportes/remesasfechas" icon="pi pi-angle-right" />
+                        <p:menuitem value="Usuarios" outcome="/vista/reportes/listadousuarios" icon="pi pi-angle-right" />
+                        <p:menuitem value="Estados" outcome="/vista/reportes/listadoestados" icon="pi pi-angle-right" />
+                        <p:menuitem value="Tipo Documentos" outcome="/vista/reportes/listadotipodocs" icon="pi pi-angle-right" />
+                        <p:menuitem value="Forma de pago" outcome="/vista/reportes/listadofpago" icon="pi pi-angle-right" />
                     </p:submenu>
 
                     <p:menuitem value="Salir" icon="ui-icon-circle-minus" action="#{loginControl.cerrarSession()}" />
