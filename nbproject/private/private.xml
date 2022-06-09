@@ -4,9 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Oscar%20Sosa/Documents/repos/remesas/remesas/web/plantilla/plantilla.xhtml</file>
-            <file>file:/C:/Users/Oscar%20Sosa/Documents/repos/remesas/remesas/web/vista/mantenimientos/formaPago.xhtml</file>
-            <file>file:/C:/Users/Oscar%20Sosa/Documents/repos/remesas/remesas/web/vista/mantenimientos/usuario.xhtml</file>
-            <file>file:/C:/Users/Oscar%20Sosa/Documents/repos/remesas/remesas/web/vista/mantenimientos/tipoDocumento.xhtml</file>
+            <file>file:/C:/Users/Oscar%20Sosa/Documents/repos/remesas/remesas/web/vista/reportes/listadotipodocs.xhtml</file>
+            <file>file:/C:/Users/Oscar%20Sosa/Documents/repos/remesas/remesas/web/vista/reportes/listadopaises.xhtml</file>
+            <file>file:/C:/Users/Oscar%20Sosa/Documents/repos/remesas/remesas/web/vista/reportes/listadousuarios.xhtml</file>
+            <file>file:/C:/Users/Oscar%20Sosa/Documents/repos/remesas/remesas/src/java/controlador/ReporteControl.java</file>
+            <file>file:/C:/Users/Oscar%20Sosa/Documents/repos/remesas/remesas/web/vista/reportes/listadoestados.xhtml</file>
+            <file>file:/C:/Users/Oscar%20Sosa/Documents/repos/remesas/remesas/web/vista/reportes/listadofpago.xhtml</file>
         </group>
     </open-files>
 </project-private>

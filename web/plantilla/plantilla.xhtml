@@ -70,7 +70,12 @@
                     </p:submenu>
 
                     <p:submenu label="Reportes" icon="ui-icon-document">
-
+                        <p:menuitem value="Listado de Paises" outcome="/vista/reportes/listadopaises" icon="pi pi-angle-right" />
+                        <p:menuitem value="Listado de Remesas" outcome="/vista/reportes/remesasfechas" icon="pi pi-angle-right" />
+                        <p:menuitem value="Listado de Usuarios" outcome="/vista/reportes/listadousuarios" icon="pi pi-angle-right" />
+                        <p:menuitem value="Listado de Estados" outcome="/vista/reportes/listadoestados" icon="pi pi-angle-right" />
+                        <p:menuitem value="Listado Tipo docs" outcome="/vista/reportes/listadotipodocs" icon="pi pi-angle-right" />
+                        <p:menuitem value="Listado forma pago" outcome="/vista/reportes/listadofpago" icon="pi pi-angle-right" />
                     </p:submenu>
 
                     <p:menuitem value="Salir" icon="ui-icon-circle-minus" action="#{loginControl.cerrarSession()}" />
